@@ -17,7 +17,9 @@
     //Loop Content
 
     endwhile;    
-    custom_pagination( $blogpost ); //Pagination
+    custom_pagination( $test ); //Pagination
     wp_reset_postdata(); 
   }
 ?>
+
+<?php echo get_theme_mod("plan1_1option_subtitle"); ?>
