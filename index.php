@@ -17,7 +17,7 @@
     //Loop Content
 
     endwhile;    
-    pagination_bar( $blogpost ); //Pagination
+    custom_pagination( $blogpost ); //Pagination
     wp_reset_postdata(); 
   }
 ?>
