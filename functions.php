@@ -14,3 +14,48 @@ function custom_pagination( $custom_query ) {
         ));
     }
 }
+
+function sud_itsupport_Customizer($wp_customize){
+	$wp_customize->add_panel( 'Sud_Page_Panel', array(
+
+	    'priority'       => 30,
+		'capability'     => 'edit_theme_options',
+		'theme_supports' => '',
+		'title'          =>'Customize Option',
+		'description'    => 'This Page Is for Customizer Page Setting'
+	));
+
+	$wp_customize->add_section('Team_section_id', array(
+			'panel' => 'Sud_Page_Panel',
+			'title' => 'Our Advisors Option'
+	));
+
+	$wp_customize->add_setting("team_name_subtitle_1", array('default' => ''));
+	
+	$wp_customize->add_control("team_name_subtitle_1", array(
+		
+		'label'   => "Name $i:",
+		'settings'=> "team_name_subtitle_1",
+		'section' => 'Team_section_id',
+		'type'    => 'text'
+			
+	));
+
+	$wp_customize->add_section('Team_section_id2', array(
+			'panel' => 'Sud_Page_Panel',
+			'title' => 'Our Advisors Option'
+	));
+
+	$wp_customize->add_setting("team_name_subtitle_2", array('default' => ''));
+	
+	$wp_customize->add_control("team_name_subtitle_2", array(
+		
+		'label'   => "Name $i:",
+		'settings'=> "team_name_subtitle_2",
+		'section' => 'Team_section_id2',
+		'type'    => 'text'
+			
+	));
+
+}
+add_action('customize_register', 'sud_itsupport_Customizer');
