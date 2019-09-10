@@ -1,4 +1,4 @@
-function pagination_bar( $custom_query ) {
+function custom_pagination( $custom_query ) {
 
     $total_pages = $custom_query->max_num_pages;
     $big = 999999999; // need an unlikely integer
